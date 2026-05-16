@@ -1,0 +1,158 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="Z169yVmhq9KLLNdosaOA" name="Página-1">
+    <mxGraphModel dx="1957" dy="1240" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#111827;" value="Emergency Flow — Diagrama de Componentes UML" vertex="1">
+          <mxGeometry height="30" width="800" x="185" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#6b7280;" value="Arquitectura N-Tier · Patrón Repositorio · .NET Core + SQL Server" vertex="1">
+          <mxGeometry height="20" width="800" x="185" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_pres" parent="1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.lean_mapping.electronic_info_flow_edge;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=13;fontStyle=1;fontColor=#1e3a8a;verticalAlign=top;spacingTop=6;strokeWidth=2;arcSize=5;" value="«layer» Presentación" vertex="1">
+          <mxGeometry height="190" width="970" x="100" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tab_pres" parent="1" style="text;html=1;strokeColor=#2563eb;fillColor=#2563eb;align=left;verticalAlign=middle;spacingLeft=8;rounded=1;arcSize=20;fontSize=12;fontStyle=1;fontColor=#ffffff;" value="«layer» Presentación" vertex="1">
+          <mxGeometry height="24" width="210" x="100" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_panel_header" parent="1" style="text;html=1;strokeColor=none;fillColor=#bfdbfe;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#1e40af;rounded=1;arcSize=10;" value="«component»" vertex="1">
+          <mxGeometry height="26" width="230" x="150" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_panel_body" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;align=center;verticalAlign=middle;fontSize=12;fontColor=#1e3a8a;strokeWidth=1.5;" value="&lt;b&gt;Panel_Operador&lt;/b&gt;&lt;br/&gt;(Web UI)&lt;br/&gt;&lt;font color=&#39;#60a5fa&#39; style=&#39;font-size:10px&#39;&gt;Interfaz de Operador&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="230" x="150" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_panel_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#2563eb;arcSize=10;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="373" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_panel_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#2563eb;arcSize=10;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="373" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_api_header" parent="1" style="text;html=1;strokeColor=none;fillColor=#bfdbfe;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#1e40af;rounded=1;arcSize=10;" value="«component»" vertex="1">
+          <mxGeometry height="26" width="230" x="760" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_api_body" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#2563eb;align=center;verticalAlign=middle;fontSize=12;fontColor=#1e3a8a;strokeWidth=1.5;" value="&lt;b&gt;API_Controllers&lt;/b&gt;&lt;br/&gt;(REST Endpoints)&lt;br/&gt;&lt;font color=&#39;#60a5fa&#39; style=&#39;font-size:10px&#39;&gt;HTTP / WebSocket&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="230" x="760" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_api_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#2563eb;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="983" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_api_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#2563eb;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="983" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_biz" parent="1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.lean_mapping.electronic_info_flow_edge;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;fontStyle=1;fontColor=#14532d;verticalAlign=top;spacingTop=6;strokeWidth=2;arcSize=5;" value="«layer» Negocio (Core)" vertex="1">
+          <mxGeometry height="190" width="970" x="100" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="tab_biz" parent="1" style="text;html=1;strokeColor=#16a34a;fillColor=#16a34a;align=left;verticalAlign=middle;spacingLeft=8;rounded=1;arcSize=20;fontSize=12;fontStyle=1;fontColor=#ffffff;" value="«layer» Negocio (Core)" vertex="1">
+          <mxGeometry height="24" width="228" x="100" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_serv_header" parent="1" style="text;html=1;strokeColor=none;fillColor=#bbf7d0;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#15803d;rounded=1;arcSize=10;" value="«component»" vertex="1">
+          <mxGeometry height="26" width="230" x="150" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_serv_body" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;align=center;verticalAlign=middle;fontSize=12;fontColor=#14532d;strokeWidth=1.5;" value="&lt;b&gt;Servicio_Ambulancias&lt;/b&gt;&lt;br/&gt;(Gestión de Flota)&lt;br/&gt;&lt;font color=&#39;#4ade80&#39; style=&#39;font-size:10px&#39;&gt;Asignación · Tracking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="230" x="150" y="396" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_serv_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#16a34a;strokeColor=#16a34a;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="373" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_serv_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#16a34a;strokeColor=#16a34a;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="373" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_motor_header" parent="1" style="text;html=1;strokeColor=none;fillColor=#bbf7d0;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#15803d;rounded=1;arcSize=10;" value="«component»" vertex="1">
+          <mxGeometry height="26" width="230" x="760" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_motor_body" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;align=center;verticalAlign=middle;fontSize=12;fontColor=#14532d;strokeWidth=1.5;" value="&lt;b&gt;Motor_Optimizacion&lt;/b&gt;&lt;br/&gt;(Algoritmo de Rutas)&lt;br/&gt;&lt;font color=&#39;#4ade80&#39; style=&#39;font-size:10px&#39;&gt;Dijkstra · A*&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="230" x="760" y="396" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_motor_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#16a34a;strokeColor=#16a34a;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="983" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_motor_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#16a34a;strokeColor=#16a34a;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="983" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_data" parent="1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.lean_mapping.electronic_info_flow_edge;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4;fillColor=#fef9c3;strokeColor=#ca8a04;fontSize=13;fontStyle=1;fontColor=#713f12;verticalAlign=top;spacingTop=6;strokeWidth=2;arcSize=5;" value="«layer» Acceso a Datos (Persistencia)" vertex="1">
+          <mxGeometry height="210" width="970" x="100" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="tab_data" parent="1" style="text;html=1;strokeColor=#ca8a04;fillColor=#ca8a04;align=left;verticalAlign=middle;spacingLeft=8;rounded=1;arcSize=20;fontSize=12;fontStyle=1;fontColor=#ffffff;" value="«layer» Acceso a Datos (Persistencia)" vertex="1">
+          <mxGeometry height="24" width="290" x="100" y="598" as="geometry" />
+        </mxCell>
+        <mxCell id="iface_irepo" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fefce8;strokeColor=#ca8a04;strokeWidth=1.5;fontSize=12;fontColor=#713f12;align=center;verticalAlign=middle;" value="«interface»&lt;br/&gt;&lt;b&gt;IRepository&lt;/b&gt;&lt;br/&gt;(Abstracción)" vertex="1">
+          <mxGeometry height="140" width="230" x="150" y="648" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_ef_header" parent="1" style="text;html=1;strokeColor=none;fillColor=#fde68a;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#92400e;rounded=1;arcSize=10;" value="«component»" vertex="1">
+          <mxGeometry height="26" width="290" x="720" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_ef_body" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fefce8;strokeColor=#ca8a04;align=center;verticalAlign=middle;fontSize=12;fontColor=#713f12;strokeWidth=1.5;" value="&lt;b&gt;EF_Repository&lt;/b&gt;&lt;br/&gt;(Entity Framework Core)&lt;br/&gt;&lt;font style=&#39;font-size:10px&#39; color=&#39;#b45309&#39;&gt;DbContext · Migrations&lt;/font&gt;&lt;br/&gt;&lt;hr/&gt;&lt;i style=&#39;font-size:10px;color:#92400e&#39;&gt;«realizes» IRepository&lt;/i&gt;" vertex="1">
+          <mxGeometry height="130" width="290" x="720" y="664" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_ef_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ca8a04;strokeColor=#ca8a04;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="1003" y="684" as="geometry" />
+        </mxCell>
+        <mxCell id="pin_ef_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ca8a04;strokeColor=#ca8a04;" value="" vertex="1">
+          <mxGeometry height="9" width="14" x="1003" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="db_sqlserver" parent="1" style="shape=mxgraph.flowchart.database;whiteSpace=wrap;html=1;align=center;fillColor=#f3e8ff;strokeColor=#7c3aed;fontSize=13;fontColor=#3b0764;fontStyle=1;strokeWidth=2;" value="«storage»&lt;br/&gt;&lt;b&gt;SQL Server&lt;/b&gt;&lt;br/&gt;EmergencyFlowDB" vertex="1">
+          <mxGeometry height="130" width="240" x="465" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_panel_api" edge="1" parent="1" source="comp_panel_body" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#2563eb;strokeWidth=1.5;fontSize=10;fontColor=#2563eb;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="comp_api_body" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_serv_motor" edge="1" parent="1" source="comp_serv_body" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#16a34a;strokeWidth=1.5;fontSize=10;fontColor=#16a34a;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="comp_motor_body" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_api_serv" edge="1" parent="1" source="comp_api_body" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#64748b;strokeWidth=1.5;fontSize=10;fontColor=#64748b;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="comp_serv_body" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_panel_serv" edge="1" parent="1" source="comp_panel_body" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#64748b;strokeWidth=1.5;fontSize=10;fontColor=#64748b;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="comp_serv_body" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_serv_irepo" edge="1" parent="1" source="comp_serv_body" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#64748b;strokeWidth=1.5;fontSize=10;fontColor=#64748b;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="iface_irepo" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_motor_irepo" edge="1" parent="1" source="comp_motor_body" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#64748b;strokeWidth=1.5;fontSize=10;fontColor=#64748b;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" target="iface_irepo" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ef_irepo" edge="1" parent="1" source="comp_ef_body" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#ca8a04;strokeWidth=1.5;fontSize=10;fontColor=#ca8a04;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="iface_irepo" value="«realizes»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ef_db" edge="1" parent="1" source="comp_ef_body" style="edgeStyle=orthogonalEdgeStyle;dashed=0;endArrow=open;endFill=0;strokeColor=#7c3aed;strokeWidth=2;fontSize=10;fontColor=#7c3aed;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="db_sqlserver" value="«access»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_box" parent="1" style="rounded=1;arcSize=5;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#e5e7eb;fontSize=11;" value="" vertex="1">
+          <mxGeometry height="130" width="330" x="100" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#374151;" value="Leyenda de relaciones UML" vertex="1">
+          <mxGeometry height="20" width="300" x="115" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_dep" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#374151;" value="Dependencia («use»)" vertex="1">
+          <mxGeometry height="20" width="220" x="200" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_dep_line" edge="1" parent="1" style="edgeStyle=none;dashed=1;endArrow=open;endFill=0;strokeColor=#64748b;strokeWidth=1.5;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="120" y="920" as="sourcePoint" />
+            <mxPoint x="195" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg_real" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#374151;" value="Realización («realizes»)" vertex="1">
+          <mxGeometry height="20" width="220" x="200" y="938" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_real_line" edge="1" parent="1" style="edgeStyle=none;dashed=1;endArrow=block;endFill=0;strokeColor=#ca8a04;strokeWidth=1.5;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="948" as="sourcePoint" />
+            <mxPoint x="195" y="948" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg_assoc" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#374151;" value="Asociación directa («access»)" vertex="1">
+          <mxGeometry height="20" width="220" x="200" y="966" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_assoc_line" edge="1" parent="1" style="edgeStyle=none;dashed=0;endArrow=open;endFill=0;strokeColor=#7c3aed;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="976" as="sourcePoint" />
+            <mxPoint x="195" y="976" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
