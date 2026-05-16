@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EmergencyFlow.Business/EmergencyFlow.Business.csproj" />
+  <Project Path="EmergencyFlow.Data/EmergencyFlow.Data.csproj" />
+  <Project Path="EmergencyFlow.Presentation/EmergencyFlow.Presentation.csproj" />
+</Solution>
