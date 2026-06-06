@@ -1,25 +1,57 @@
-# ADR 02: Adopción de Vistas Arquitectónicas Multidimensionales para EmergencyFlow
+# ADR-02: Definición y Documentación de Vistas Arquitectónicas para EmergencyFlow
 
-## Status
-Proposed
+| Campo | Valor |
+|-------|-------|
+| Autor | Noé Euan Herrera |
+| Fecha | 05/06/2026 |
+| Estado | `Propuesto` |
 
-## Context
-Con el crecimiento del sistema *EmergencyFlow* y la necesidad de comunicar de manera clara la estructura de software a diferentes interesados, se vuelve insuficiente contar únicamente con diagramas de contexto. Es necesario describir el sistema desde múltiples perspectivas concurrentes para asegurar la comprensión de los flujos de proceso, la organización del código, la infraestructura física y la topología de despliegue.
+---
 
-## Decision
-Hemos decidido adoptar un enfoque de diseño basado en **Vistas Arquitectónicas** para modelar de manera integral el sistema *EmergencyFlow*. Específicamente, documentaremos e implementaremos 4 vistas fundamentales utilizando la herramienta estándar Mermaid:
+## Contexto
+A medida que el backend y la estructura de "Emergency Flow" avanzan, un diagrama de contexto general resulta insuficiente para describir el comportamiento y la distribución del sistema. Se requiere una documentación técnica que desglose el proyecto desde diferentes perspectivas concurrentes. Esto permitirá mapear los flujos lógicos, los procesos en tiempo real, la disposición de los archivos en el entorno de desarrollo y la infraestructura de servidores necesaria para su puesta en marcha.
 
-1. **Vista Lógica:** Describe la organización del código en capas.
-2. **Vista de Procesos:** Mapea el flujo dinámico de un reporte desde que se genera hasta su persistencia.
-3. **Vista Física:** Muestra la organización del código fuente en el repositorio.
-4. **Vista de Despliegue:** Modela la topología de red y servidores para producción.
+## Decisión
+Se ha decidido implementar el modelo de vistas arquitectónicas para documentar de forma el sistema. Para cumplir con el estándar técnico y facilitar el mantenimiento del proyecto, el modelado de los diagramas se realizará directamente en lenguaje Mermaid dentro del repositorio. 
 
-Asimismo, se incluye formalmente la **Declaración de Uso de IA** en cumplimiento con los lineamientos académicos vigentes.
+Se documentarán las siguientes cuatro perspectivas específicas:
+1. **Vista Lógica:** Estructuración interna del software mediante el patrón de desarrollo en capas.
+2. **Vista de Procesos:** Comportamiento dinámico del sistema y comunicación entre componentes durante un evento.
+3. **Vista Física:** Organización real de los subproyectos y directorios dentro del repositorio.
+4. **Vista de Despliegue:** Topología de red y servidores requeridos para el entorno de producción.
 
-## Consequences
-* **Positivas:** Mayor claridad para el desarrollo, facilidad para auditar el flujo de los reportes de emergencia y un sustento de diseño impecable para la evaluación académica.
-* **Negativas:** Incremento en el tiempo de mantenimiento de la documentación técnica ante futuros cambios de diseño.
+Asimismo, se anexa la declaración formal sobre las herramientas de apoyo utilizadas durante el proceso de diseño.
+
+## Consecuencias
+* **Positivas:** Mayor claridad en el flujo de datos para futuras implementaciones, modularidad transparente y un respaldo técnico robusto para las evaluaciones del proyecto.
+* **Negativas:** Requiere tiempo adicional para actualizar los diagramas si se realizan modificaciones estructurales en el código.
 
 ---
 
 ## Diagramas de las 4 Vistas Aplicadas
+
+### 1. Vista Lógica
+Describe la distribución de los componentes del software organizados bajo el esquema de N-Capas implementado en el proyecto.
+
+```mermaid
+graph TD
+    subgraph Capa_Presentación
+        Controllers["Controllers (IncidenteController)"]
+        Views["Views (Razor HTML / CSS)"]
+    end
+    subgraph Capa_Negocio
+        Services["Services (IncidenteService)"]
+        InterfacesB["Interfaces de Servicio (IIncidenteService)"]
+    end
+    subgraph Capa_Datos
+        Repositories["Repositories (IncidenteRepository)"]
+        InterfacesD["Interfaces de Repositorio (IIncidenteRepository)"]
+        Entities["Entities (Incidente.cs)"]
+    end
+
+    Views --> Controllers
+    Controllers --> InterfacesB
+    Services --> InterfacesB
+    Services --> InterfacesD
+    Repositories --> InterfacesD
+    Repositories --> Entities
