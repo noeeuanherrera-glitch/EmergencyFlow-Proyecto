@@ -13,13 +13,17 @@ El sistema *EmergencyFlow* requiere una estructura clara que permita procesar re
 
 ## Estilo Arquitectónico Elegido
 Se ha seleccionado el estilo de **Arquitectura en Capas (Layered Architecture / N-Tier)**. La solución de Visual Studio se ha dividido físicamente en tres proyectos con un flujo de dependencia unidireccional (de arriba hacia abajo):
-1. **EmergencyFlow.Presentation:** Interfaz de usuario (Razor Views) y Controladores.
-2. **EmergencyFlow.Business:** Centraliza las reglas de asignación y despacho de incidentes.
-3. **EmergencyFlow.Data:** Maneja la abstracción del almacenamiento mediante el patrón repositorio.
+1. **EmergencyFlow.Presentation:** Interfaz de usuario mediante Vistas Razor y Controladores.
+2. **EmergencyFlow.Business:** Centraliza las reglas de asignación, lógica interna y despacho de incidentes.
+3. **EmergencyFlow.Data:** Maneja la abstracción del almacenamiento mediante el patrón repositorio y entidades.
 
+## Justificación
+Este estilo resuelve de manera óptima el problema por las siguientes razones:
+* **Curva de desarrollo:** Permite un avance rápido, directo y ordenado, ideal para los tiempos de entrega del cuatrimestre.
+* **Separación de Responsabilidades:** Se puede modificar el diseño visual en la capa de presentación sin alterar las reglas críticas de negocio en el backend.
 
 ## Alternativas Consideradas y Descartadas
-1. **Arquitectura Hexagonal (Ports & Adapters):** Fue fuertemente considerada por su excelente aislamiento del dominio. Sin embargo, **se descartó** debido a que la refactorización requerida para implementar los puertos de entrada/salida añadiría una complejidad técnica innecesaria que pondría en riesgo los tiempos de entrega del proyecto actual.
+1. **Arquitectura Hexagonal (Ports and Adapters):** Fue considerada por su excelente aislamiento del dominio. Sin embargo, se descartó debido a que la refactorización requerida para implementar los puertos de entrada y salida añadiría una complejidad técnica innecesaria que pondría en riesgo los tiempos de entrega inmediata del proyecto actual.
 2. **Monolito de una Sola Capa:** Descartado porque mezclar la lógica de la interfaz con las consultas de datos impide realizar pruebas unitarias y dificulta la escalabilidad.
 
 ---
@@ -40,10 +44,5 @@ graph TD
         Repo["Repositorios y Persistencia"]
     end
 
-    UI -->|Dependencia estricta| Logic
-    Logic -->|Dependencia estricta| Repo
-
-## Justificación
-Este estilo resuelve de manera óptima el problema por las siguientes razones:
-* **Curva de desarrollo:** Permite un avance rápido y ordenado, ideal para los tiempos de entrega del cuatrimestre.
-* **Separación de Responsabilidades:** Se puede modificar el diseño visual en la capa de presentación sin alterar las reglas críticas de negocio en el backend.
+    UI --> Logic
+    Logic --> Repo
