@@ -49,6 +49,32 @@ graph TD
         Entities["Entidades (Incidente.cs)"]
     end
 
+### 2. Vista de Procesos
+Representa el flujo dinámico y el comportamiento del sistema cuando un usuario realiza la acción de reportar un incidente.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Usuario
+    participant Vista as UI (Razor View)
+    participant Ctrl as IncidenteController
+    participant Serv as IncidenteService
+    participant Repo as IncidenteRepository
+    
+    Usuario->>Vista: Rellena formulario de incidente y da clic en "Enviar"
+    Vista->>Ctrl: Envía petición POST con los datos del reporte
+    Ctrl->>Serv: Llama a RegistrarIncidente(incidente)
+    Note over Serv: Se ejecutan las validaciones de negocio
+    alt Datos Inválidos
+        Serv-->>Ctrl: Retorna false + Mensaje de error
+        Ctrl-->>Vista: Recarga la vista con alertas visuales
+    else Datos Válidos
+        Serv->>Repo: Llama a Agregar(incidente)
+        Note over Repo: Se genera ID único y se guarda en el repositorio
+        Repo-->>Serv: Confirmación de guardado
+        Serv-->>Ctrl: Retorna true (Éxito)
+        Ctrl-->>Vista: Redirecciona al listado general de incidentes
+    end
     Views --> Controllers
     Controllers --> InterfacesB
     Services --> InterfacesB
