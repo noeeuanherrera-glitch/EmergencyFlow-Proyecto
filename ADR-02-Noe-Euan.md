@@ -80,3 +80,32 @@ sequenceDiagram
         Serv-->>Ctrl: Retorna true (Éxito)
         Ctrl-->>Vista: Redirecciona al listado general de incidentes
     end
+
+
+### 3. Vista Física (Implementación)
+Muestra la organización real y la nomenclatura de las carpetas y subproyectos que estructuran la solución global dentro de este repositorio de GitHub, reflejando el desacoplamiento físico del software.
+
+```text
+EmergencyFlow/
+├── Flujo de emergencia.sln (Archivo de Solución Global)
+├── Presentación de EmergencyFlow/ (Capa de Interfaz de Usuario y Controladores)
+├── EmergencyFlow.Negocios/ (Capa de Lógica de Negocio y Validaciones)
+└── Datos de EmergencyFlow/ (Capa de Persistencia y Repositorios)
+
+graph LR
+    subgraph Dispositivo_Cliente["Dispositivo Cliente"]
+        Browser["Navegador Web<br>(Chrome / Edge / Safari)"]
+    end
+    
+    subgraph Servidor_Cloud["Servidor Cloud (Azure / AWS)"]
+        IIS["Servidor Kestrel / IIS<br>(Aloja Presentación de EmergencyFlow)"]
+        Runtime[".NET 8.0 Runtime"]
+    end
+    
+    subgraph Servidor_Base_Datos["Servidor Base de Datos"]
+        DB[("Motor SQL Server<br>(Base de Datos Relacional)")]
+    end
+
+    Browser -->|HTTPS / Puerto 443| IIS
+    IIS <--> Runtime
+    Runtime -->|Cadenas de Conexión / TCP IP| DB
