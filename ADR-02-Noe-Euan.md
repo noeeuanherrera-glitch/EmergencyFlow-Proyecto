@@ -34,19 +34,19 @@ Muestra los componentes lógicos organizados bajo el esquema de N-Capas de .NET 
 ```mermaid
 graph TD
     subgraph Capa_Presentacion["Capa Presentación"]
-        Controllers["Controladores (IncidenteController)"]
-        Views["Vistas (Razor HTML / CSS)"]
+        Controllers["Controladores - IncidenteController"]
+        Views["Vistas - Razor HTML y CSS"]
     end
     
     subgraph Capa_Negocio["Capa Negocio"]
-        Services["Servicios (IncidenteService)"]
-        InterfacesB["Interfaces de Servicio (IIncidenteService)"]
+        Services["Servicios - IncidenteService"]
+        InterfacesB["Interfaces de Servicio - IIncidenteService"]
     end
     
     subgraph Capa_Datos["Capa Datos"]
-        Repositories["Repositorios (IncidenteRepository)"]
-        InterfacesD["Interfaces de Repositorio (IIncidenteRepository)"]
-        Entities["Entidades (Incidente.cs)"]
+        Repositories["Repositorios - IncidenteRepository"]
+        InterfacesD["Interfaces de Repositorio - IIncidenteRepository"]
+        Entities["Entidades - Incidente.cs"]
     end
 
     Views --> Controllers
