@@ -55,26 +55,3 @@ graph TD
     Services --> InterfacesD
     Repositories --> InterfacesD
     Repositories --> Entities
-
-    sequenceDiagram
-    autonumber
-    actor Usuario
-    participant Vista as UI Razor View
-    participant Ctrl as IncidenteController
-    participant Serv as IncidenteService
-    participant Repo as IncidenteRepository
-    
-    Usuario->>Vista: Rellena formulario de incidente y da clic en Enviar
-    Vista->>Ctrl: Envia peticion POST con los datos del reporte
-    Ctrl->>Serv: Llama a RegistrarIncidente
-    Note over Serv: Se ejecutan las validaciones de negocio
-    alt Datos Invalidos
-        Serv-->>Ctrl: Retorna false y Mensaje de error
-        Ctrl-->>Vista: Recarga la vista con alertas visuales
-    else Datos Validos
-        Serv->>Repo: Llama a Agregar incidente
-        Note over Repo: Se genera ID unico y se guarda
-        Repo-->>Serv: Confirmacion de guardado
-        Serv-->>Ctrl: Retorna true de Exito
-        Ctrl-->>Vista: Redirecciona al listado de incidentes
-    end
