@@ -82,11 +82,6 @@ sequenceDiagram
     Repositories --> InterfacesD
     Repositories --> Entities
 
-EmergencyFlow/
-├── Flujo de emergencia.sln (Archivo de Solución Global)
-├── Presentación de EmergencyFlow/ (Capa de Interfaz de Usuario y Controladores)
-├── EmergencyFlow.Negocios/ (Capa de Lógica de Negocio y Validaciones)
-└── Datos de EmergencyFlow/ (Capa de Persistencia y Repositorios)
 
 graph LR
     subgraph Dispositivo_Cliente["Dispositivo Cliente"]
