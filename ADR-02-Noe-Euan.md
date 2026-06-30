@@ -35,43 +35,22 @@ Describe la distribución de los componentes del software organizados bajo el es
 
 ```mermaid
 graph TD
-    subgraph Capa_Presentación
-        Controllers["Controllers (IncidenteController)"]
-        Views["Views (Razor HTML / CSS)"]
+    subgraph Capa_Presentacion["Capa Presentación"]
+        Controllers["Controladores (IncidenteController)"]
+        Views["Vistas (Razor HTML / CSS)"]
     end
-    subgraph Capa_Negocio
-        Services["Services (IncidenteService)"]
+    
+    subgraph Capa_Negocio["Capa Negocio"]
+        Services["Servicios (IncidenteService)"]
         InterfacesB["Interfaces de Servicio (IIncidenteService)"]
     end
-    subgraph Capa_Datos
-        Repositories["Repositories (IncidenteRepository)"]
+    
+    subgraph Capa_Datos["Capa Datos"]
+        Repositories["Repositorios (IncidenteRepository)"]
         InterfacesD["Interfaces de Repositorio (IIncidenteRepository)"]
-        Entities["Entities (Incidente.cs)"]
+        Entities["Entidades (Incidente.cs)"]
     end
 
-2-Vista de Procesos
-sequenceDiagram
-    autonumber
-    actor Usuario
-    participant Vista as UI (Razor View)
-    participant Ctrl as IncidenteController
-    participant Serv as IncidenteService
-    participant Repo as IncidenteRepository
-    
-    Usuario->>Vista: Rellena formulario de incidente y da clic en "Enviar"
-    Vista->>Ctrl: Envía petición POST con los datos del reporte
-    Ctrl->>Serv: Llama a RegistrarIncidente(incidente)
-    Note over Serv: Se ejecutan validaciones:< />¿El título o descripción están vacíos?
-    alt Datos Inválidos
-        Serv-->>Ctrl: Retorna false + Mensaje de error
-        Ctrl-->>Vista: Recarga la vista con alertas visuales
-    else Datos Válidos
-        Serv->>Repo: Llama a Agregar(incidente)
-        Note over Repo: Se genera un ID único y< />se guarda temporalmente en memoria RAM
-        Repo-->>Serv: Confirmación de guardado
-        Serv-->>Ctrl: Retorna true (Éxito)
-        Ctrl-->>Vista: Redirecciona al listado general de incidentes
-    end
     Views --> Controllers
     Controllers --> InterfacesB
     Services --> InterfacesB
