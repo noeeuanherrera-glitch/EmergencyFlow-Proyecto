@@ -12,7 +12,7 @@
 El sistema *EmergencyFlow* requiere una estructura clara que permita procesar reportes de incidentes, validar reglas de negocio críticas (como la asignación de prioridades) y gestionar la persistencia de datos de forma eficiente. Para evitar un diseño acoplado y garantizar que el software sea mantenible, se debe definir un estilo arquitectónico formal.
 
 ## Estilo Arquitectónico Elegido
-Se ha seleccionado el estilo de **Arquitectura en Capas (Layered Architecture / N-Tier)**. La solución de Visual Studio se ha dividido físicamente en tres proyectos con un flujo de dependencia unidireccional (de arriba hacia abajo):
+Se ha seleccionado el estilo de **Arquitectura en Capas (Layered Architecture / N-Tier)**. La solución de Visual Studio se ha dividido físicamente en tres proyectos con un flujo de dependencia unidireccional:
 1. **EmergencyFlow.Presentation:** Interfaz de usuario mediante Vistas Razor y Controladores.
 2. **EmergencyFlow.Business:** Centraliza las reglas de asignación, lógica interna y despacho de incidentes.
 3. **EmergencyFlow.Data:** Maneja la abstracción del almacenamiento mediante el patrón repositorio y entidades.
